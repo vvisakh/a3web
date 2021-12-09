@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<!-- Group 15: Sneha Mohan, Janelli Powell, Praveen Mohan, Visakh Vijayan, Lindsay Aldous -->
+<!-- last modified 8 Dec 2021 -->
+
+<html lang="en">
+
+<head>
+    <!-- Praveen Time: 13:38-->
+    <title>G15 Consulting Group</title>
+
+    <!--Company logo as the page icon-->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- The link to the single external CSS page, based on https://www.w3schools.com/html/html_css.asp -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- start JPowell 11/22/2021 -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- end JPowell 11/22/2021 -->
+</head>
+
+    
+<body>
+    <!-- start Jpowell November 18th 1:36PM - also navbar css properties (hover, etc.) -->
+    <nav class="navbar">   
+        <!-- LOGO -->
+       <div class="logo"><a href = "index.html"><img src = "images/logo.png" alt="G15 logo"> Consulting Group</a></div> 
+
+        <!--12/09/2021 This whole section is the culprit of the 3 outstanding bugs. 
+        I tried for couple hours fixing it after our evaluation but the more I try to fix it, 
+        the more it breaks. Lesson learned, we should use the validator whenever we apply changes - daily at least 
+        so that we can catch all the bugs as we progress. Will do better next semester, learned a lot.-->
+        <ul class="nav-links">
+            <!--&#9776; is an HTML entity that displays the ☰ (hamburger icon.-->
+            <!--If this hidden checkbox is checked, apply certain style rules-->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!--Navigation Menu-->
+            <div class="menu"> 
+                <li><a href = "index.html">About Us</a></li>
+                <li><a href = "team.html">Meet the Team</a></li>
+                <li class="navservices">
+                    <a href="#">Services</a>
+                    <!--Dropdown Menu-->
+                    <ul class="dropdown">
+                        <li><a href="geoprocessing.html">Geoprocessing</a></li>
+                        <li><a href="cartography.html">Cartography</a></li>
+                        <li><a href="spatialAnalysis.html">Spatial Analysis</a></li>	   
+                        <li><a href="imgAnalysis.html">Image Analysis</a></li>
+                    </ul>
+                </li>
+                <li><a href="Partners.html">Partners</a></li>
+                <li class="nav-item"><a class="nav-link" href = "contact.html">Contact Us</a></li>
+           </div>
+        </ul>  
+    </nav>
+    <!--end Jpowell 11/22/2021 -->
+
+    <main> <!-- Sneha Mohan (12/07/2021) - main and css properties (font family, margins, etc.) and JS/jQuery component to apply effects TBD -->
+        <!-- (pages of content - everyone contributes to these ) -->
+
+    <!-- Partner section starts  -->
+    <!--Content-Sneha Mohan-->
+    <!--In this page company's partnerships and alliances will discuss-->
+
+<section class="alliances">
+    <!--Design of title was inspired from a random template and the span element reference was taken from w3 schools-->
+    <h1 class="heading">
+        <span>P</span>
+        <span>A</span>
+        <span>R</span>
+        <span>T</span>
+        <span>N</span>
+        <span>E</span>
+        <span>R</span>
+        <span>S</span>
+        
+    </h1>
+    
+    <!--An introduction about the benefits of partnership-->
+     <p class = "partner">By partnering with a selected organization, we can offer a wider range of services, 
+                as well as enhanced support and advice based on hands-on experience. We also work closely with relevant industry 
+                associations to keep future GI strategies up-to-date and encourage enterprises to use geographic information. 
+                Below are some of our partnerships and alliances.</p>
+    
+    <!--List of companies-->
+    <div class= "des"> 
+    <img class="text" src="images/esri.png" alt="esri">
+            <p>Esri enables us to deliver the world's leading geographic information systems software and solutions to our customers. 
+                It also means we can configure, customize, and develop solutions based on Esri's ArcGIS platform.</p>
+        
+
+     <img class="text" src="images/AGI.png" alt="AGI">
+            <p>We have been a corporate member of AGI(The Association for Geographic Information) since the formation of our company. 
+            It helps us to refresh our professional skills and stay in touch with latest development in the GI industry.</p>
+            
+     <img class="text" src="images/CIG.png" alt="CIG">
+            <p>As a CIG (Canadian Institute of Geomatics) member we are able to contribute, educate, and assist towards the 
+            development and implementation of GIS technology worldwide. </p>
+    
+     </div>
+
+</section>
+<!--End of Partners Page-->
+</main>
+<!--End of Main section-->
+    
+<footer> <!-- Visakh  Date- 18 November 2021- -->
+
+        <section class="footer">
+    
+            <div class="box-container">
+        
+                <div class="box">
+                    <h3>About Us</h3>
+                    <p>A group of keen, eager, enthusiastic, <br> passionate, motivated, 
+                    committed, <br> earnest, tired GIS Students <br> doing 
+                    their best </p>
+                </div>
+                <!--Quick links to communicate with the company and our office locations at various parts of the worls-->
+                <div class="box">
+                    <h3>Branch Locations</h3>
+                    <a href="https://en.wikipedia.org/wiki/India">India</a>
+                    <a href="https://en.wikipedia.org/wiki/United_States">USA</a>                
+                    <a href="https://en.wikipedia.org/wiki/Japan">Japan</a>                
+                    <a href="https://en.wikipedia.org/wiki/Canada">Canada</a>
+                </div>
+                <div class="box">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">About Us</a>
+                    <a href="team.html">Meet the Team</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="box">
+                    <h3>Follow Us</h3>
+                    <a href="https://en.wikipedia.org/wiki/Facebook">Facebook</a>
+                    <a href="https://en.wikipedia.org/wiki/Twitter">Twitter</a>
+                    <a href="https://en.wikipedia.org/wiki/LinkedIn">Linkedin</a>
+                </div>
+        
+            </div>
+        
+            <h1 class="credit"> Created by <span> Group 15 </span> | All "rights" reserved! </h1>
+        
+        </section>
+      
+      </footer>
+    
+    </body>
+    
+    </html>
