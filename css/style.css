@@ -1,0 +1,643 @@
+/* style.css
+Group 15: Sneha Mohan, Janelli Powell, Visakh Vijayan, Lindsay Aldous
+last modified 7 Dec 2021 by L. Aldous*/
+
+ :root{
+  --orange:#ffa500;
+}
+
+ body, html {
+    background-color: white;
+    height: 100%;
+    margin: 0px;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+    color: #333
+  }
+
+/********************************************************************************************************/
+/*Janelli Powell | November 18, 2021 | My assigned section: Navigation Bar Style*/
+/*Added comments, fixed media query, and adjust the dropdown menu after our Template Evaluation | 11/25/2021 */
+/*This is universal selector*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;/*The width and height values apply to the element's content and it's padding */
+}
+
+/*declaration for all "navbar" class*/
+.navbar {
+  display: flex; /*I prefer flex that grid it's simple but powerful. The flow of the items can be modified easily, you can even reverse them.*/
+  align-items:center;
+  justify-content:space-evenly;
+  padding-right: 15px;
+  background-color:#333333; /*This color used to be blue "Santorini", modifying now to match with the footer*/
+  color: #fff;
+  font-family: sans-serif;
+}
+
+/*declaration for all list child of class "navbar"*/
+.navbar li{
+  list-style: none; /*This is to remove all the syle like bullets, underlined text, etc...*/
+}
+
+/*declaration for all links child of class "nav-links"*/
+.nav-links a {
+  text-decoration: none; 
+  color: #fff;
+}
+
+/* Future Logo Style */
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #fff;
+  text-decoration: none; 
+}
+.logo img {
+  width: 75px;
+  display:inline-block;
+  vertical-align:middle;
+}
+
+
+/* Navivation Bar Menu */
+.menu{
+  display:flex;
+  right:0;
+  gap:3em; /*This will set the row and column gap between the menu list. And oh, 1em is equivalent to 16px*/
+  font-size: 16px; 
+  float: right;
+}
+
+/*declaration for list of links child of class "menu" style when mouse is over it*/
+.menu li a:hover{
+  color: #ffa500;
+  border-radius: 8px; /*rounded corners*/
+  /*Transition effect with a duration of 1 second. 
+  The "ease" property makes it start slow, then fast then end slowly. https://www.w3schools.com/css/css3_transitions.asp*/
+  transition: 0.5s ease;
+}
+
+/*declaration for all list child of class "menu"*/
+.menu li{
+  padding: 5px 14px;
+}
+
+/* Dropdown Menu Style */
+/*Setting the "service menu" to "relative" to reserve the space for the dropdown list*/
+.navservices{
+  position: relative; 
+}
+
+/*declaration for all elements with class "dropdown"*/
+.dropdown{
+  background-color: #3C3C3C; 
+  padding: 1em 0;
+  position: absolute; /*The element is positioned relative to service menu*/
+  display: none; /*This is to hind the dropdown menu (: */
+  border-radius: 8px; /*rounded corners*/
+  top: 30px;
+  font-size: 14px;
+}
+/*This is an adjacent sibling combinator (+). It separates two selectors and matches the second element only if it immediately follow the first element, and both are children of the same parent element*/
+/*In this instance, it's the LIST that come immediately after "dropdown" list child of class https://www.w3schools.com/css/css_combinators.asp*/
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+/*declaration for all list child of class "dropdown"*/
+.dropdown li{
+  padding: 0.5em 1em;
+  width: 10em;
+  text-align: center;
+}
+
+/*declaration for list child of class "dropdown" style when mouse is over it*/
+.dropdown li a:hover {
+  color:#ffa500;
+}
+
+/*declaration all class name "dropdown" that are decendents of the calss "navservices" where mouse is over it */
+.navservices:hover .dropdown {
+  display: block;
+}
+
+/*Responsive NavBar Menu*/
+/*This is a hidden checkbox. This is checked when user is using smaller screens like mobile. 
+/*I learned this trick from https://css-tricks.com/the-checkbox-hack/*/ 
+/* Checkbox Hack */
+input[type=checkbox]{
+  display: none;
+} 
+
+/*Hamburger Menu ☰ icon*/
+.hamburger{
+  display: none;
+  font-size: 24px;
+  user-select: none; /*this is so the user won't be able to select*/
+}
+
+.hamburger:hover{
+  color:#ffa500;
+  transition: 0.3s ease;
+}
+
+/*This is the style for our pretend testimonial (source: w3schools.com) - trying to blend with Sneha's css*/
+.testimonials{
+  flex: 1 1 30rem;
+  border-radius: .5rem;
+  padding:1.5rem; /*modified by: Janelli Powell I'm increasing the padding from 1rem to 1.5rem so there's more gap on top and won't look as crowded*/
+  padding-left: 10%; /*by: Janelli Powell putting some gap on the left side of screen*/
+  padding-right: 10%; /*by: Janelli Powell putting some gap on the right side of screen*/
+}
+
+.testcontainer {
+  background-color: rgb(250, 245, 245);
+  border-radius: .5rem; /*this makes the corners of the box round - just like Sneha's css*/
+  padding: 10px;
+  margin: 25px 0;
+  color:#666;
+}
+
+.testcontainer::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.testcontainer img {
+  float: left; /*this will make sure that the images floats on the left side of the text */
+  margin-right: 20px;
+  border-radius: 50%;
+  width:90px;
+}
+
+.testcontainer span {
+  font-size: 20px;
+  margin-right: 15px;
+  font-weight: bold; /*this is to emphasize our client's name*/
+}
+
+/*This is a Media block. The media query  will be applied to any device that has a window browser size of 1024px or smaller (Tablets, Ipads, Mobile Phones)*/
+/* Responsive to smaller screens - will have to set hamburger for tablet/ipad size screens as well.*/
+@media (max-width: 1024px){
+  .menu{ 
+      display:none;
+      position: absolute;
+      background-color:#333333;
+      right: 0;
+      left: 0;
+      text-align: center;
+      padding: 16px 0;
+  }
+
+  /*declaration for list child of class "menu" style when mouse is over it*/
+  .menu li a:hover{
+      display: inline-block;
+      color:#ffa500;
+      transition: 0.3s ease;
+  }
+
+  /*declaration for all list child of class "menu"*/
+  /*Another adjacent sibling combinator (+)*/
+  /*In this instance, it's the LIST that come immediately after "menu" list child of class.*/
+  .menu li + li{
+      margin-top: 12px;
+  }
+
+  /*declaration all "menu" class elements that are next sibling of the hidden input checkbox.*/
+  /*This is a general-sibling combinator tilde (~). It separates two compound selectors. https://www.w3schools.com/css/css_combinators.asp*/
+  /*"checked" means toggled to an on state*/
+  input[type=checkbox]:checked ~ .menu{
+      display: block;
+  }
+
+  /*I'm using "block" as display option to as I want the hamburger icon to take the whole 24px witdth.*/
+  .hamburger{
+      display: block;
+  }
+
+  /*This is for setting location for dropdown menu*/
+  .dropdown {
+    left: 45%;
+    top: 25px;
+    transform: translateX(35%);
+  }
+
+  /*declaration for list child of class "dropdown" style when mouse is over it*/
+  .dropdown li a:hover{
+      color: #ffa500;
+  }
+
+  /*declaration for our pretend testimonials*/
+  .testcontainer {
+    text-align: center;
+    color:#666;
+  }
+  .testcontainer img {
+      margin: auto;
+      float: none;
+      display: block;
+      width:90px;
+  }
+}
+
+/*End JPowell 11/22/2021 Navigation Bar Style*/
+/********************************************************************************************************/
+
+
+/*Main section - Sneha Mohan*/
+/*rem unit was used because all the sizes are referenced from the root font size, there is no more need to cover the nesting cases in separate declarations*/
+/*refrence taken from W3 schools*/
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: white;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main__content h2 {
+    font-size: 5rem;
+    padding-bottom: 1.5rem;
+    color: #6a6af5;
+}
+
+.main__btn {
+    font-size: 1.3rem;
+    background-color: rgb(214, 117, 37);
+    padding: 13px 35px;
+    font-weight: 600;
+    border: none;
+    border-radius: 9px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: white;
+    
+}
+
+.main__btn a:hover {
+    color: black;
+    background: white;
+}
+
+.main__img--container {
+    text-align: center
+}
+
+#main__img {
+    height: 80%;
+    width: 90%
+}
+
+
+.main__content {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.main__content h2 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+
+
+.main__btn {
+    padding: 12px 36px;
+    margin: 2.5rem 0;
+}
+ 
+/* Main Section Ends */
+
+/* ******************************************************************************************* */
+
+/* footer section */
+
+.footer{
+  background:#333;
+}
+
+.footer .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  margin: 80px;
+}
+
+
+:root{
+  --orange:#ffa500;
+}
+
+.footer .box-container .box h3{
+  font-size: 1.5rem;
+  padding:.7rem 0;
+  color:#fff;
+}
+
+.footer .box-container .box p{
+  font-size: 1rem;
+  padding:.7rem 0;
+  color:#eee;
+}
+
+.footer .box-container .box a{
+  display: block;
+  font-size: 1rem;
+  padding:.7rem 0;
+  font-family: verdana;
+  color:#eee;
+}
+
+.footer .box-container .box a:hover{
+  color:var(--orange);
+  text-decoration: underline;
+}
+
+.footer .credit{
+  text-align: center;
+  padding:2rem 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  color:#fff;
+  border-top: .1rem solid rgba(255,255,255,.2);
+}
+
+.footer .credit span{
+  color:var(--orange);
+}
+
+/* footer section ends */
+/* ******************************************************************************************* */
+
+/*start Sneha's css - she'll be repositioning this later*/
+.heading{
+  text-align: center;
+  padding:2.5rem 0
+}
+
+.heading span{
+  font-size: 3.5rem;
+  background:rgba(255, 165, 0,.2);
+  color:var(--orange);
+  border-radius: .5rem;
+  padding:.4rem 1rem;
+}
+
+.heading span.space{
+  background:none;
+}
+
+ /* Team section starts*/
+ .services{
+  padding-left: 10%; /*by: Janelli Powell putting some gap on the left side of screen*/
+  padding-right: 10%; /*by: Janelli Powell putting some gap on the right side of screen*/
+ }
+
+ .services .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.services .box-container .box{
+  flex: 1 1 30rem;
+  border-radius: .5rem;
+  padding:1.5rem; /*modified by: Janelli Powell I'm increasing the padding from 1rem to 1.5rem so there's more gap on top and won't look as crowded*/
+  text-align: center;
+}
+
+.services .box-container .box img{
+  padding:.5rem;
+  font-size: 5rem;
+  color:var(--orange);
+  object-fit: fill;
+  width: 100%;
+}
+
+
+
+.services .box-container .box h3{
+  font-size: 2rem; /*modified by: Janelli Powell I've reduced the font size from 2.5rem to 2rem - same as below.*/
+  color:#333;
+}
+
+.services .box-container .box p{
+  font-size: 1rem;/*modified by: Janelli Powell I've reduced the font size from 1.5rem to 1rem - what is rem unit again?*/
+  color:#666;
+  padding:1rem 0;
+}
+
+.services .box-container .box:hover{
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+
+/* Meet the Team*/ 
+.team{
+  padding-left: 10%; /*by: Janelli Powell putting some gap on the left side of screen*/
+  padding-right: 10%; /*by: Janelli Powell putting some gap on the right side of screen*/
+}
+.team .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+}
+
+.team .box-container .box{
+  flex:1 1 30rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+
+.team .box-container .box img{
+  height: 25rem;
+  width:100%;
+  object-fit: cover;
+}
+
+.team .box-container .box .content{
+  padding:2rem;
+}
+
+.team .box-container .box .content h3{
+  font-size:2rem;
+  color:#333;
+}
+
+.team .box-container .box .content h3 i{
+  color:var(--orange);
+}
+
+.team .box-container .box .content p{
+  font-size:1.7rem;
+  color:#666;
+  padding:1rem 0;
+}
+
+.btn {
+  font-size: 25px;
+  color: rgb(19, 12, 12);
+}
+
+/* Team section ends*/
+
+/*end Sneha's css - she'll be repositioning this later */
+ 
+/* ******************************************************************************************* */
+/* Cartography page - description of service + slide deck of examples of work
+Last modified 5 Dec 2021 by L. Aldous
+
+Considered improving on the image gallery from Assignment 2 with adjustments to accommodate 
+more varied images, but decided to try w3 schools responsive image slider to better showcase
+the maps and work in a JS component */
+/* https://www.w3schools.com/howto/howto_js_slideshow.asp */
+/* removed the fade component */
+
+p.carto {
+font-size: 16px;
+padding-top: 50px;
+color: #666;
+}
+.cartoImage {
+  height: 100%;
+  width: 100%
+}
+
+/* This CSS began as the out-of-the-box stuff from w3schools and now has several
+sections removed that didn't seen necessary, and some minor additions */
+
+/* Slideshow container */
+.carto-slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
+padding-bottom: 50px;     /* added this so the <br> could be removed */
+}
+
+/* Hide the images by default - I wanted to show the first image by default,
+but I couldn't find a way to get the JS to co-operate with that idea */
+.ourSlides {
+display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;        /*shows the cursor that indicates a clickable-item */
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: #6a6af5;
+font-weight: bold;
+font-size: 18px;
+}
+  /* Position the "next" to the right and the "prev" button to the left*/
+  .next {
+  right: 0;
+  }
+  .prev {
+  left: 0;
+  }
+    /* On hover, add a black background color with some transparency */
+    .prev:hover, .next:hover {
+    background-color: #333;
+    }
+
+/* Caption text */
+.cartoCaption {
+color: #333;
+font-family: verdana;
+font-size: 14px;
+padding: 8px 12px;
+position: absolute;
+width: 100%;
+text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dotSelector {
+text-align: center;
+padding-bottom: 20px;
+padding-top: 20px;
+}
+  .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center
+  }
+  .active, .dot:hover {
+  background-color: #717171;
+  }
+
+/* End of Cartography page */
+/* ******************************************************************************************* */
+
+/* Spatial Analysis Page*/
+/*Positioning image*/
+.mySlides {
+  height: 300px;
+  width: 100%;
+}
+
+/*End-Spatial Analysis*/
+
+/* ***************************************************************************************** */
+
+/*Partners page-Sneha Mohan*/
+/*Some basic positioning to the page*/
+.partner {
+  text-align: center;
+  color:rgb(34, 31, 31);
+}
+.alliances{
+  flex: 1 1 30rem;
+  border-radius: .5rem;
+  padding:1.5rem; 
+  padding-left: 10%; 
+  padding-right: 10%; 
+}
+
+.des {
+  width: 1000px;
+  border: 5px solid rgb(213, 223, 213);
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 60px;
+  margin: 50px;
+}
+
+/* Partners page end*/
+
+
