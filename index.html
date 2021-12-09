@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<!-- Group 15: Sneha Mohan, Janelli Powell, Visakh Vijayan, Lindsay Aldous -->
+<!-- last modified 8 Dec 2021 -->
+
+<html lang="en">
+
+<head>
+    <!-- Praveen Time: 13:38-->
+    <title>G15 Consulting Group</title>
+
+    <!--Company logo as the page icon-->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- The link to the single external CSS page, based on https://www.w3schools.com/html/html_css.asp -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Lindsay - JS component comes from slideshow on cartography page, leaving this here for reference  -->
+    <script src="js/script.js"> </script>
+
+    <!-- start JPowell 11/22/2021 -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- end JPowell 11/22/2021 -->
+</head>
+
+    
+<body>
+
+    <!-- start Janelli Powell November 18th 1:36PM -->
+    <nav class="navbar">   
+        <!-- LOGO -->
+       <div class="logo"><a href = "index.html"><img src = "images/logo.png" alt="G15 logo"> Consulting Group</a></div> 
+        <div class="nav-links">
+            <ul class="menu">
+                <!--Navigation Menu-->
+                <li><a href = "index.html">About Us</a></li>
+                <li><a href = "team.html">Meet the Team</a></li>
+                <li class="navservices">
+                    <a href="#">Services</a>
+                    <!--Dropdown Menu-->
+                    <ul class="dropdown">
+                    <li><a href="geoprocessing.html">Geoprocessing</a></li>
+                    <li><a href="cartography.html">Cartography</a></li>
+                        <li><a href="spatialAnalysis.html">Spatial Analysis</a></li>	   
+                    <li><a href="imgAnalysis.html">Image Analysis</a></li>
+                    </ul>
+                </li>
+                <li><a href="Partners.html">Partners</a></li>
+                <li class="nav-item"><a class="nav-link" href = "contact.html">Contact Us</a></li>
+            </ul>  
+            <!--&#9776; is an HTML entity that displays the ☰ (hamburger icon.-->
+            <!--If this hidden checkbox is checked, apply certain style rules-->
+            <div>
+                <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            </div>
+        </div>
+   </nav>
+   <!--end Janelli Powell 11/22/2021 -->
+
+    <main> <!-- Sneha Mohan (11/19/2021) -->
+        <!--Main section-->
+
+        <div class="main">
+            <div class="main__container">
+              <div class="main__content">
+                <!-- About Us text added by Lindsay on Dec 5 - keeping it very short so the stacking in mobile view
+                doesn't make it un-readable (also not sure what else to write) -->
+                <h2>Are you in need of GIS services?</h2>
+                  <p>Our dynamic team of geospatial professionals brings a wide range of
+                      skills to meet all of your needs in the areas of: <br> <br> Geoprocessing
+                      <br> Cartography <br> Spatial Analysis <br> Image Analysis <br> <br>
+                      We look forward to working with you!
+                  </p>
+                
+                <!--start modify by: Janelli Powell - make button redirect to Contact Page-->
+                <!--<button class="main__btn"><a href="contact.html">Contact Us for a quote</a></button>-->
+                <button  onclick="location.href = 'contact.html';" class="main__btn">Contact Us for a quote</button>
+                <!--end modify by: Janelli Powell - make button redirect to Contact Page-->
+              </div>
+                <!-- image from Sneha -->
+              <div class="box">
+                <div class="main__img--container">
+                    <img src=images/pic1.png alt="pic" id="main__img"/>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!--start Janelli Powell Pretend Testimonials (: -->
+        <section class="testimonials">
+            <h1 class="heading">
+                <span>T</span>
+                <span>E</span>
+                <span>S</span>
+                <span>T</span>
+                <span>I</span>
+                <span>M</span>
+                <span>O</span>
+                <span>N</span>
+                <span>I</span>
+                <span>A</span>
+                <span>L</span>
+                <span>S</span>
+            </h1>     
+            
+            <div class="testcontainer">
+                <img src="images/people.png" alt="placeholder image">
+                <p><span>Phill W.</span>CEO of Planview Company.</p>
+                <p>Thanks for the quick and accurate work. It was a great pleasure working with you and we hope to be able 
+                    to use your services again soon in the future.</p>
+            </div>
+
+            <div class="testcontainer">
+                <img src="images/people.png" alt="placeholder image">
+                <p><span>Alex F.</span>CEO of Hydro Two.</p>
+                <p>Our data is fully converted for use in our new ESRI GIS Enterprise system. Thank you G15 for all the hard work 
+                    and the excellent customer service we received throughout the project.</p>
+            </div>
+
+            <div class="testcontainer">
+                <img src="images/people.png" alt="placeholder image">
+                <p><span>Grace T.</span>Director of Alectra.</p>
+                <p>G15 was able to adapt to a project with rapidly shifting needs and data. They were professional and always 
+                    watching for what was best for us and our business. We will be coming back soon to make sure we can keep you working with our data.</p>
+            </div>
+
+            <div class="testcontainer">
+                <img src="images/people.png" alt="placeholder image">
+                <p><span>Venella S.</span>Utility Manager</p>
+                <p>The mapping performed by G15 was simply incredible and they were very nice, 
+                    even when dealing with our lack of understanding on the deeper GIS services. 
+                    They explained to us as much as we needed for us to be comfortable with the process and what they were doing. Thanks, G15!</p>
+            </div>
+            <!--end Janelli Powell Pretend Testimonials (: -->
+
+            <!--adding Lindsay's pretend testimonials too -->
+            <div class="testcontainer">
+                <img src="images/people.png" alt="placeholder image">
+                <p><span>Kevin W.</span>Project Coordinator</p>
+                <p>Amazing work G15! Our request was processed in record-time, and we were thrilled with the result.</p>
+            </div>
+
+            <div class="testcontainer">
+                <img src="images/people.png" alt="placeholder image">
+                <p><span>Taje M.</span>SVP Operations</p>
+                <p>The quality of work from G15 was above and beyond what we were expecting. They were friendly and 
+                    accommodating throughout the entire process and we wouldn't hesitate to bring a service request to them again in the future.</p>
+            </div>
+            <!-- end Lindsay's attempt at very, very fake testimonials -->
+        </section>
+            
+     </main>
+	
+    <!--Main section Ends-->
+
+    <footer> <!-- Visakh  Date- 18 November 2021- -->
+
+        <section class="footer">
+
+            <div class="box-container">
+        
+                <div class="box">
+                    <h3>About Us</h3>
+                    <p>A group of keen, eager, enthusiastic, <br> passionate, motivated, 
+                    committed, <br> earnest, tired GIS Students <br> doing 
+                    their best </p>
+                </div>
+                <div class="box">
+                    <h3>Branch Locations</h3>
+                    <a href="https://en.wikipedia.org/wiki/India">India</a>
+                    <a href="https://en.wikipedia.org/wiki/United_States">USA</a>                
+                    <a href="https://en.wikipedia.org/wiki/Japan">Japan</a>                
+                    <a href="https://en.wikipedia.org/wiki/Canada">Canada</a>
+                </div>
+                <div class="box">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">About Us</a>
+                    <a href="team.html">Meet the Team</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="box">
+                    <h3>Follow Us</h3>
+                    <a href="https://en.wikipedia.org/wiki/Facebook">Facebook</a>
+                    <a href="https://en.wikipedia.org/wiki/Twitter">Twitter</a>
+                    <a href="https://en.wikipedia.org/wiki/LinkedIn">Linkedin</a>
+                </div>
+        
+            </div>
+        
+            <h1 class="credit"> Created by <span> Group 15 </span> | All "rights" reserved! </h1>
+        
+        </section>
+
+    </footer>
+
+</body>
+
+</html>

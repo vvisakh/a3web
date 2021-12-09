@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<!-- Group 15: Sneha Mohan, Janelli Powell, Praveen Mohan, Visakh Vijayan, Lindsay Aldous -->
+<!-- last modified 5 Dec 2021 by L. Aldous-->
+
+<html lang="en">
+
+<head>
+    <!-- Praveen Time: 13:38-->
+    <title>G15 Consulting Group</title>
+
+    <!--Company logo as the page icon-->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- The link to the single external CSS page, based on https://www.w3schools.com/html/html_css.asp -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- start JPowell 11/22/2021 -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- end JPowell 11/22/2021 -->
+</head>
+
+    
+<body>
+
+    <!-- start Janelli Powell November 18th 1:36PM - also navbar css properties (hover, etc.) and JS/jQuery component to apply effects TBD -->
+    <nav class="navbar">   
+        <!-- LOGO -->
+       <div class="logo"><a href = "index.html"><img src = "images/logo.png" alt="G15 logo"> Consulting Group</a></div> 
+        <div class="nav-links">
+            <ul class="menu">
+                <!--Navigation Menu-->
+                <li><a href = "index.html">About Us</a></li>
+                <li><a href = "team.html">Meet the Team</a></li>
+                <li class="navservices">
+                    <a href="#">Services</a>
+                    <!--Dropdown Menu-->
+                    <ul class="dropdown">
+                    <li><a href="geoprocessing.html">Geoprocessing</a></li>
+                    <li><a href="cartography.html">Cartography</a></li>
+                        <li><a href="spatialAnalysis.html">Spatial Analysis</a></li>	   
+                    <li><a href="imgAnalysis.html">Image Analysis</a></li>
+                    </ul>
+                </li>
+                <li><a href="Partners.html">Partners</a></li>
+                <li class="nav-item"><a class="nav-link" href = "contact.html">Contact Us</a></li>
+            </ul>  
+            <!--&#9776; is an HTML entity that displays the ☰ (hamburger icon.-->
+            <!--If this hidden checkbox is checked, apply certain style rules-->
+            <div>
+                <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            </div>
+        </div>
+   </nav>
+   <!--end Janelli Powell 11/22/2021 -->
+    <main> <!-- Sneha Mohan (11/19/2021) - main and css properties (font family, margins, etc.) and JS/jQuery component to apply effects TBD -->
+        <!-- (pages of content - everyone contributes to these ) -->
+        <!--Main section-->
+        <!--Content prepared by Visakh Vijayan-->
+        <section class="services">
+        <!--Design of title was inspired from a random template and the span element reference was taken from w3 schools-->
+            <h1 class="heading">
+                <span>I</span>
+                <span>M</span>
+                <span>A</span>
+                <span>G</span>
+                <span>E</span>
+		<span class="space"></span>
+                <span>A</span>
+                <span>N</span>
+                <span>A</span>
+                <span>L</span>
+                <span>Y</span>
+                <span>S</span>
+                <span>I</span>
+                <span>S</span>
+            </h1>
+
+            <div class="box-container">
+                <div class="box">
+                <p class = "imageanalysis">We develop products for visualization, analysis, and management of geospatial and scientific data.  </p> 
+            </div>
+           </div>
+
+           <div class="box-container">
+            <div class="box">
+            <!--Visakh Vijayan -The images used in this page are from my own M.Sc. Thesis work on 'Delineation of Palaeochannels in Rann of Kutch Area, Gujarat Using Image Fusion of optical and microwave date.' -->    
+            <div class="image-container">
+            <div class="IA1-caption">Optical Landsat-8 OLI data (8 October, 2019) of 30m resolution is fused with Microwave image
+                NovaSAR S-Band VV data (4 October, 2019) of 11m resolution</div>   
+            <img class="imageSlides" src="images/IA_1.jpg" alt="image"> 
+            <div class="IA2-caption">Optical Landsat-8 OLI data (8 October, 2019) of 30m resolution is fused with Microwave image
+                Sentinel-1A C-Band VV data (4 OCT, 2019) of 10m resolution</div>
+            <img class="imageSlides" src="images/IA_2.jpg" alt="image">
+            <div class="IA3-caption">Optical Landsat-8 OLI data (8 October, 2019) of 30m resolution is fused with Microwave image
+                Sentinel-1A C-Band VH data (4 OCT, 2019) of 10m resolution</div>
+            <img class="imageSlides" src="images/IA_3.jpg" alt="image">
+            <div class="IA4-caption">Optical Landsat-5 TM data (2007) of 30m resolution is fused with Microwave image ALOS 
+                PALSAR-1 L-Band HH data (2007) of 12.5m resolution</div>
+            <img class="imageSlides" src="images/IA_4.jpg" alt="image">
+            
+        
+            </div>
+                </div>
+                    </div>
+
+            </section>
+
+     </main>
+	
+    <!--Main Section Ends-->
+
+    <footer> <!-- Visakh  Date- 18 November 2021- -->
+
+        <section class="footer">
+
+            <div class="box-container">
+        
+                <div class="box">
+                    <h3>About Us</h3>
+                    <p>A group of keen, eager, enthusiastic, <br> passionate, motivated, 
+                    committed, <br> earnest, tired GIS Students <br> doing 
+                    their best </p>
+                </div>
+                <!--Quick links to communicate with the company and our office locations at various parts of the worls-->
+                <div class="box">
+                    <h3>Branch Locations</h3>
+                    <a href="https://en.wikipedia.org/wiki/India">India</a>
+                    <a href="https://en.wikipedia.org/wiki/United_States">USA</a>                
+                    <a href="https://en.wikipedia.org/wiki/Japan">Japan</a>                
+                    <a href="https://en.wikipedia.org/wiki/Canada">Canada</a>
+                </div>
+                <div class="box">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">About Us</a>
+                    <a href="team.html">Meet the Team</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="box">
+                    <h3>Follow Us</h3>
+                    <a href="https://en.wikipedia.org/wiki/Facebook">Facebook</a>
+                    <a href="https://en.wikipedia.org/wiki/Twitter">Twitter</a>
+                    <a href="https://en.wikipedia.org/wiki/LinkedIn">Linkedin</a>
+                </div>
+        
+            </div>
+        
+            <h1 class="credit"> Created by <span> Group 15 </span> | All "rights" reserved! </h1>
+        
+        </section>
+
+    </footer>
+
+</body>
+
+</html>

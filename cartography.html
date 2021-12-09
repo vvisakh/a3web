@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<!-- Group 15: Sneha Mohan, Janelli Powell, Visakh Vijayan, Lindsay Aldous -->
+<!-- Last modified 6 Dec 2021 by L. Aldous -->
+
+<html lang="en">
+
+<head>
+    <!-- Praveen Time: 13:38-->
+    <title>G15 Consulting Group</title>
+
+    <!--Company logo as the page icon-->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- The link to the single external CSS page, based on https://www.w3schools.com/html/html_css.asp -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Lindsay: JS component comes from slideshow on cartography page and was inspired by a 
+    how-to from w3 schools: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+    <script src="js/script.js"> </script>
+
+    <!-- start JPowell 11/22/2021 -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- end JPowell 11/22/2021 -->
+
+</head>
+
+<body>
+
+    <!-- start Janelli Powell November 18th 1:36PM - also navbar css properties (hover, etc.) and JS/jQuery component to apply effects TBD -->
+    <nav class="navbar">   
+        <!-- LOGO -->
+       <div class="logo"><a href = "index.html"><img src = "images/logo.png" alt="G15 logo"> Consulting Group</a></div> 
+        <div class="nav-links">
+            <ul class="menu">
+                <!--Navigation Menu-->
+                <li><a href = "index.html">About Us</a></li>
+                <li><a href = "team.html">Meet the Team</a></li>
+                <li class="navservices">
+                    <a href="#">Services</a>
+                    <!--Dropdown Menu-->
+                    <ul class="dropdown">
+                    <li><a href="geoprocessing.html">Geoprocessing</a></li>
+                    <li><a href="cartography.html">Cartography</a></li>
+                        <li><a href="spatialAnalysis.html">Spatial Analysis</a></li>	   
+                    <li><a href="imgAnalysis.html">Image Analysis</a></li>
+                    </ul>
+                </li>
+                <li><a href="Partners.html">Partners</a></li>
+                <li class="nav-item"><a class="nav-link" href = "contact.html">Contact Us</a></li>
+            </ul>  
+            <!--&#9776; is an HTML entity that displays the ☰ (hamburger icon.-->
+            <!--If this hidden checkbox is checked, apply certain style rules-->
+            <div>
+                <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            </div>
+        </div>
+   </nav>
+   <!--end Janelli Powell 11/22/2021 -->
+	
+    <main>  <!-- Content for cartography.html page completed by Lindsay -->
+        <!-- last modified 5 Dec 2021 -->
+
+        <section class="services">
+
+            <h1 class="heading">
+                <span>C</span>
+                <span>A</span>
+                <span>R</span>
+                <span>T</span>
+                <span>O</span>
+                <span>G</span>
+                <span>R</span>
+                <span>A</span>
+                <span>P</span>
+                <span>H</span>
+                <span>Y</span>
+            </h1>
+
+            <div class="box-container">
+                <div class="box">
+                    <p class = "carto">We provide clean, simple maps for use in reports, presentations, and on websites.
+                        Maps can be designed for any scale, and for traditional printing or as interactive web maps.
+                        Click one of the grey dots below to view some examples of our completed projects. </p>
+
+                    <!-- The image slideshow concept was inspired by a w3 schools tutorial - the original HTML for this page
+                    was pulled from that tutorial in its out-of-box form, and has been adjusted to remove some unnecessary
+                    complexity and to better suit our purpose -->
+                    
+                    <!-- The dots to move between maps in any order -->
+                    <div class="dotSelector">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    </div> 
+
+                    <!-- Slideshow container -->
+                    <div class="carto-slideshow-container">
+
+                        <!-- The images and captions -->
+                        <div class="ourSlides">
+                        <img src="images/cartography/GVITF3_Qualitative_Color_Layout_24K_1.png" alt="GVITF3 Qualitative Color" class="cartoImage">
+                        <div class="cartoCaption">A 34" x 44" reference map created to display the land-use 
+                            patterns of Sault Ste. Marie, Ontario.</div>
+                        </div>
+
+                        <div class="ourSlides">
+                        <img src="images/cartography/LAldous_GVITF4_1.png" alt="GVITF4" class="cartoImage">
+                        <div class="cartoCaption">A small-scale map designed to demonstrate the distribution
+                            of remaining wooded areas across the Grey-Bruce region of Ontario.</div>
+                        </div>
+                    
+                        <div class="ourSlides">
+                        <img src="images/cartography/KTA_copy_without_labels_1.png" alt="KTA Trail Map" class="cartoImage">
+                        <div class="cartoCaption">A reference trail map designed for the public and trail association
+                            volunteers alike to print and carry while exploring or maintaining the trail network.</div>
+                        </div>
+                            
+                        <div class="ourSlides">
+                        <img src="images/cartography/StationBeachParkingSignsMap_1.png" alt="Station Beach Parking Signs Map" class="cartoImage">
+                        <div class="cartoCaption">A map created to support a clerk's report to a municipal council
+                            about recommended amendments to the parking by-law of a popular beach.</div>
+                        </div>
+
+                        <div class="ourSlides">
+                        <img src="images/cartography/WasteReceptacles2021_1.png" alt="MoK Waste Receptacles Map" class="cartoImage">
+                        <div class="cartoCaption">A map designed for an environmental committee meeting to demonstrate 
+                            the approximate distribution of waste receptacles across the main settlements of a lower-tier 
+                            municipality.</div>
+                        </div>
+                        
+                        <!-- Next and previous buttons to allow the user to move between maps in sequence by clicking the arrows -->
+                        <!-- The numbers that follow the ampersand and pound create the left-pointing and right-pointing arrow symbols -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+
+                </div>
+
+            </div> 
+
+        </section>
+
+    </main>
+
+    <!--Main Section Ends-->
+
+    <footer> <!-- Visakh  Date- 18 November 2021- -->
+
+        <section class="footer">
+
+            <div class="box-container">
+
+                <div class="box">
+                    <h3>About Us</h3>
+                    <p>A group of keen, eager, enthusiastic, <br> passionate, motivated, 
+                    committed, <br> earnest, tired GIS Students <br> doing 
+                    their best </p>
+                </div>
+                <div class="box">
+                    <h3>Branch Locations</h3>
+                    <a href="https://en.wikipedia.org/wiki/India">India</a>
+                    <a href="https://en.wikipedia.org/wiki/United_States">USA</a>                
+                    <a href="https://en.wikipedia.org/wiki/Japan">Japan</a>                
+                    <a href="https://en.wikipedia.org/wiki/Canada">Canada</a>
+                </div>
+                <div class="box">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">About Us</a>
+                    <a href="team.html">Meet the Team</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="box">
+                    <h3>Follow Us</h3>
+                    <a href="https://en.wikipedia.org/wiki/Facebook">Facebook</a>
+                    <a href="https://en.wikipedia.org/wiki/Twitter">Twitter</a>
+                    <a href="https://en.wikipedia.org/wiki/LinkedIn">Linkedin</a>
+                </div>
+
+            </div>
+
+            <h1 class="credit"> Created by <span> Group 15 </span> | All "rights" reserved! </h1>
+
+        </section>
+  
+  </footer>
+
+</body>
+
+</html>
